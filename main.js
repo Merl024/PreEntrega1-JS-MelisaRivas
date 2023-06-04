@@ -1,6 +1,6 @@
 /* Se hizo un simulador de convertidor de masas, volumen y longitudes, en donde el usuario puede escoger entre convertir de libras (lb) a gramos, litros (l) a mililitros (ml) y más */
 
-// Empezamos declarando variables para el convertidor
+// Empezamos declarando funciones para el convertidor
 //Kg a Lb
 function kgAlb(){
    let kg = parseInt(prompt("Ingrese la cantidad de kilogramos (kg) que desea convertir a libras (lb): "))
@@ -39,10 +39,11 @@ function inchAcm(){
 }
 
 //MENÚ PRINCIPAL
+let usuario = prompt("Ingrese su nombre: ")
 let salirMenu = false
 do{
-let opciones = parseInt(prompt(`¿Qué desea convertir?
-   0 - Salir del menu
+let opciones = parseInt(prompt(`Estamos para ayudarte, ${usuario}. ¿Qué desea convertir?
+   0 - Salir del menu.
    1 - Convertir masas.
    2 - Convertir volumen.
    3 - Convertir longitudes.`))
@@ -111,11 +112,11 @@ let opciones = parseInt(prompt(`¿Qué desea convertir?
             }  
       continue
       case 0:
-         alert(`Gracias por utilizar nuestro convertidor. ¡Vuelve pronto!`)
+         alert(`Gracias por utilizar nuestro convertidor, ${usuario}. ¡Vuelve pronto!`)
          salirMenu = true
       break   
       default:
-         alert("Oh! oh!, no tenemos esa opción :(, intenta de nuevo.")
+         alert('Oh! oh!, no tenemos esa opción :(, intenta de nuevo.')
       break
    }
 }while(!salirMenu)
