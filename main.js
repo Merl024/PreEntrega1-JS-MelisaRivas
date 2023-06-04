@@ -1,4 +1,4 @@
-/* Se hizo un simulador de calculador de imc y cantidad de agua que la persona deberia tomar segun el peso y se hizo  convertidor de masas, volumen y longitudes,, en donde el usuario puede escoger entre convertir de libras (lb) a gramos, litros (l) a mililitros (ml) y más, para que podamos sacar el imc del usuario sim problema. */
+/* Se hizo un simulador de convertidor de masas, volumen y longitudes,, en donde el usuario puede escoger entre convertir de libras (lb) a gramos, litros (l) a mililitros (ml) y más*/
 
 // Empezamos declarando funciones para el convertidor
 //Kg a Lb
