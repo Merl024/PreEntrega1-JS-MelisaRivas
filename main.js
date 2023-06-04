@@ -1,4 +1,4 @@
-/* Se hizo un simulador de convertidor de masas, volumen y longitudes, en donde el usuario puede escoger entre convertir de libras (lb) a gramos, litros (l) a mililitros (ml) y más */
+/* Se hizo un simulador de calculador de imc y cantidad de agua que la persona deberia tomar segun el peso y se hizo  convertidor de masas, volumen y longitudes,, en donde el usuario puede escoger entre convertir de libras (lb) a gramos, litros (l) a mililitros (ml) y más, para que podamos sacar el imc del usuario sim problema. */
 
 // Empezamos declarando funciones para el convertidor
 //Kg a Lb
@@ -48,6 +48,7 @@ let opciones = parseInt(prompt(`Estamos para ayudarte, ${usuario}. ¿Qué desea 
    2 - Convertir volumen.
    3 - Convertir longitudes.`))
    switch(opciones){
+      //menu de opciones para convertir masas
       case 1:
          let opcionesDeMasa = parseInt(prompt(`¿Qué desea convertir?
             0 - Regresar al menu principal
@@ -69,6 +70,7 @@ let opciones = parseInt(prompt(`Estamos para ayudarte, ${usuario}. ¿Qué desea 
                break
             }
       continue
+      //menu de opciones para convertir volumen
       case 2:
          let opcionesDeVolumen = parseInt(prompt(`¿Qué desea convertir?
             0 - Regresar al menu principal
@@ -90,6 +92,7 @@ let opciones = parseInt(prompt(`Estamos para ayudarte, ${usuario}. ¿Qué desea 
                break
             }
       continue
+      //menu de opciones para convertir longitudes
       case 3:
          let opcionesDeLongitudes = parseInt(prompt(`¿Qué desea convertir?
             0 - Regresar al menu principal
