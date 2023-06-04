@@ -1,4 +1,4 @@
-/* Se hizo un simulador de convertidor de masas y volumen, en donde el usuario puede escoger entre convertir de libras (lb) a gramos, litros (l) a mililitros (ml) y más */
+/* Se hizo un simulador de convertidor de masas, volumen y longitudes, en donde el usuario puede escoger entre convertir de libras (lb) a gramos, litros (l) a mililitros (ml) y más */
 
 // Empezamos declarando variables para el convertidor
 //Kg a Lb
@@ -17,37 +17,99 @@ function lbAg(){
 function galAl(){
    let gal = parseInt(prompt("Ingrese la cantidad de galones (gal) que desea convertir a litros (l): "))
    let conversionAl = gal * 3.78541
-   alert(`${gal}gal a litros son ${conversionAl}l`) 
+   alert(`${gal}gal a litros son ${conversionAl}L`) 
 }
 // L a ml
 function lAml(){
    let l = parseInt(prompt("Ingrese la cantidad de litros (l) que desea convertir a mililitro (ml): "))
    let conversionAml = l * 1000
-   alert(`${l}l a mililitro son ${conversionAml}ml`) 
+   alert(`${l}L a mililitro son ${conversionAml}ml`) 
+}
+//pies a m 
+function ftAm(){
+   let ft = parseInt(prompt("Ingrese la cantidad de pies (ft) que desea convertir a metros (m): "))
+   let conversionAm = ft / 0.3048
+   alert(`${ft}ft a metros son ${conversionAm}m`) 
+}
+// pulgadas a cm
+function inchAcm(){
+   let inch = parseInt(prompt("Ingrese la cantidad de pulgadas (in) que desea convertir a centimetros (cm): "))
+   let conversionAcm = inch * 2.54
+   alert(`${inch}in a metros son ${conversionAcm}cm`) 
 }
 
-//MENÚ con ciclo do while y condicional switch 
+//MENÚ PRINCIPAL
 let salirMenu = false
 do{
 let opciones = parseInt(prompt(`¿Qué desea convertir?
-   1 - Convertir Kilogramos (kg) a libras (lb)
-   2 - Convertir libras (lb) a gramos (g)
-   3 - Convertir galones (gal) a litros (l)
-   4 - Convertir litros (l) a mililitro (ml)
-   0 - Salir del menu`))
+   0 - Salir del menu
+   1 - Convertir masas.
+   2 - Convertir volumen.
+   3 - Convertir longitudes.`))
    switch(opciones){
       case 1:
-         kgAlb()
-      break
+         let opcionesDeMasa = parseInt(prompt(`¿Qué desea convertir?
+            0 - Regresar al menu principal
+            1 - Convertir Kilogramos (kg) a libras (lb)
+            2 - Convertir libras (lb) a gramos (g)`))
+            switch(opcionesDeMasa){
+               case 1:
+                  kgAlb()
+               break
+               case 2:
+                  lbAg()
+               break     
+               case 0:
+                  alert(`Regresando al menú principal...`)
+                  opcionesDeMasa = true
+               break   
+               default:
+                  alert("Oh! oh!, no tenemos esa opción :(, intenta de nuevo.")
+               break
+            }
+      continue
       case 2:
-         lbAg()
-      break
+         let opcionesDeVolumen = parseInt(prompt(`¿Qué desea convertir?
+            0 - Regresar al menu principal
+            1 - Convertir galones (gal) a litros (l)
+            2 - Convertir litros (l) a mililitro (ml)`))
+            switch(opcionesDeVolumen){
+               case 1:
+                  galAl()
+               break
+               case 2:
+                  lAml()
+               break     
+               case 0:
+                  alert(`Regresando al menú principal...`)
+                  opcionesDeVolumen = true
+               break   
+               default:
+                  alert("Oh! oh!, no tenemos esa opción :(, intenta de nuevo.")
+               break
+            }
+      continue
       case 3:
-         galAl()
-      break    
-      case 4:
-         lAml()
-      break     
+         let opcionesDeLongitudes = parseInt(prompt(`¿Qué desea convertir?
+            0 - Regresar al menu principal
+            1 - Convertir pies (ft) a metros (m)
+            2 - Convertir pulgadas (in) a centimretos (cm)`))
+            switch(opcionesDeLongitudes){
+               case 1:
+                  ftAm()
+               break
+               case 2:
+                  inchAcm()
+               break     
+               case 0:
+                  alert(`Regresando al menú principal...`)
+                  opcionesDeLongitudes = true
+               break   
+               default:
+                  alert("Oh! oh!, no tenemos esa opción :(, intenta de nuevo.")
+               break
+            }  
+      continue
       case 0:
          alert(`Gracias por utilizar nuestro convertidor. ¡Vuelve pronto!`)
          salirMenu = true
