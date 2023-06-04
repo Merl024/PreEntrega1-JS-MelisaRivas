@@ -39,7 +39,7 @@ function inchAcm(){
 }
 
 //MENÚ PRINCIPAL
-let usuario = prompt("Ingrese su nombre: ")
+let usuario = prompt("Bienvenido/a a nuestro convertidor de masa, volumen y longitudes. Ingrese su nombre: ")
 let salirMenu = false
 do{
 let opciones = parseInt(prompt(`Estamos para ayudarte, ${usuario}. ¿Qué desea convertir?
@@ -112,7 +112,7 @@ let opciones = parseInt(prompt(`Estamos para ayudarte, ${usuario}. ¿Qué desea 
             }  
       continue
       case 0:
-         alert(`Gracias por utilizar nuestro convertidor, ${usuario}. ¡Vuelve pronto!`)
+         alert(`Gracias por utilizar nuestro convertidor, ${usuario}. ¡Vuelva pronto!`)
          salirMenu = true
       break   
       default:
