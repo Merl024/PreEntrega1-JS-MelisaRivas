@@ -28,7 +28,7 @@ function lAml(){
 //pies a m 
 function ftAm(){
    let ft = parseInt(prompt("Ingrese la cantidad de pies (ft) que desea convertir a metros (m): "))
-   let conversionAm = ft / 0.3048
+   let conversionAm = ft / 3.281
    alert(`${ft}ft a metros son ${conversionAm}m`) 
 }
 // pulgadas a cm
