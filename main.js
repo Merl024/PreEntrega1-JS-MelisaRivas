@@ -5,37 +5,37 @@
 function kgAlb(){
    let kg = parseInt(prompt("Ingrese la cantidad de kilogramos (kg) que desea convertir a libras (lb): "))
    let conversionAlb = kg * 2.20462
-   alert(`${kg}kg a libras son ${conversionAlb}lb`) 
+   alert(`${kg}kg a libras son ${conversionAlb.toFixed(2)}lb`) 
 }
 // Lb a g
 function lbAg(){
    let lb = parseInt(prompt("Ingrese la cantidad de libras (l) que desea convertir a gramos (g): "))
    let conversionAg = lb * 453.592
-   alert(`${lb}lb a gramos son ${conversionAg}g`) 
+   alert(`${lb}lb a gramos son ${conversionAg.toFixed(2)}g`) 
 }
 //Gal a l
 function galAl(){
    let gal = parseInt(prompt("Ingrese la cantidad de galones (gal) que desea convertir a litros (l): "))
    let conversionAl = gal * 3.78541
-   alert(`${gal}gal a litros son ${conversionAl}L`) 
+   alert(`${gal}gal a litros son ${conversionAl.toFixed(2)}L`) 
 }
 // L a ml
 function lAml(){
    let l = parseInt(prompt("Ingrese la cantidad de litros (l) que desea convertir a mililitro (ml): "))
    let conversionAml = l * 1000
-   alert(`${l}L a mililitro son ${conversionAml}ml`) 
+   alert(`${l}L a mililitro son ${conversionAml.toFixed(2)}ml`) 
 }
 //pies a m 
 function ftAm(){
    let ft = parseInt(prompt("Ingrese la cantidad de pies (ft) que desea convertir a metros (m): "))
    let conversionAm = ft / 3.281
-   alert(`${ft}ft a metros son ${conversionAm}m`) 
+   alert(`${ft}ft a metros son ${conversionAm.toFixed(2)}m`) 
 }
 // pulgadas a cm
 function inchAcm(){
    let inch = parseInt(prompt("Ingrese la cantidad de pulgadas (in) que desea convertir a centimetros (cm): "))
    let conversionAcm = inch * 2.54
-   alert(`${inch}in a metros son ${conversionAcm}cm`) 
+   alert(`${inch}in a metros son ${conversionAcm.toFixed(2)}cm`) 
 }
 
 //MENÚ PRINCIPAL
